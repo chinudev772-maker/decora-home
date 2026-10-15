@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DECORA HOME — Premium Home Decor</title>
+  <meta name="description" content="DECORA HOME: thoughtfully designed furniture, lighting and decor for calm, beautiful homes.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%235C4033'/%3E%3Cpath d='M8 25V14a8 8 0 0 1 16 0v11M13.5 25v-7a2.5 2.5 0 0 1 5 0v7' fill='none' stroke='%23F8F6F3' stroke-width='1.8' stroke-linecap='round'/%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Icon sprite: used everywhere as <svg class="icon"><use href="#i-name"></use></svg> -->
+  <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20.5s-7.5-4.6-7.5-10.2A4.3 4.3 0 0 1 12 7.6a4.3 4.3 0 0 1 7.5 2.7c0 5.6-7.5 10.2-7.5 10.2z"/></symbol>
+    <symbol id="i-bag" viewBox="0 0 24 24"><path d="M5 8h14l-1 12H6L5 8z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 3.5 2.6 5.4 5.9.8-4.3 4.1 1 5.8L12 16.9l-5.2 2.7 1-5.8L3.5 9.7l5.9-.8L12 3.5z"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol>
+    <symbol id="i-trash" viewBox="0 0 24 24"><path d="M4 7h16M9 7V4.5h6V7M6.5 7l1 13h9l1-13M10 11v5.5M14 11v5.5"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M6.5 3.5h3l1.5 4-2 1.5a11 11 0 0 0 6 6l1.5-2 4 1.5v3a2 2 0 0 1-2.2 2A17 17 0 0 1 4.5 5.7 2 2 0 0 1 6.5 3.5z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3.5" y="5.5" width="17" height="13" rx="2"/><path d="m4 7 8 6 8-6"/></symbol>
+  </svg>
+
+  <div class="announcement"><span>Free Shipping on Orders Above ₹999</span> <span class="announcement__sep" aria-hidden="true">|</span> <span>New Arrivals Available</span></div>
+
+  <!-- ===== Header ===== -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <button class="icon-btn menu-toggle" id="menuToggle" data-action="toggle-menu" aria-label="Menu" aria-expanded="false" aria-controls="nav">
+        <svg class="icon" aria-hidden="true"><use href="#i-menu"></use></svg>
+      </button>
+
+      <a class="logo" href="#home" aria-label="DECORA HOME, back to top">
+        <svg class="logo__mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M6 28V14a10 10 0 0 1 20 0v14M13 28v-9a3 3 0 0 1 6 0v9M3 28h26"/></svg>
+        <span>DECORA <span class="logo__thin">HOME</span></span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Main">
+        <a href="#home">Home</a>
+        <a href="#shop" data-action="filter" data-category="All">Shop</a>
+        <a href="#shop" data-action="filter" data-category="Living Room">Living Room</a>
+        <a href="#shop" data-action="filter" data-category="Bedroom">Bedroom</a>
+        <a href="#shop" data-action="filter" data-category="Decor">Decor</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="header__actions">
+        <button class="icon-btn" data-action="open-search" aria-label="Search products">
+          <svg class="icon" aria-hidden="true"><use href="#i-search"></use></svg>
+        </button>
+        <button class="icon-btn" id="wishButton" data-action="open-wishlist" aria-label="Wishlist">
+          <svg class="icon" aria-hidden="true"><use href="#i-heart"></use></svg>
+          <span class="count" id="wishCount" aria-hidden="true">0</span>
+        </button>
+        <button class="icon-btn" id="cartButton" data-action="open-cart" aria-label="Cart">
+          <svg class="icon" aria-hidden="true"><use href="#i-bag"></use></svg>
+          <span class="count" id="cartCount" aria-hidden="true">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ===== Hero ===== -->
+    <section class="hero" id="home">
+      <img class="hero__img" fetchpriority="high" width="1800" height="1000"
+           src="https://images.unsplash.com/photo-1631679706909-1844bbd07221?auto=format&amp;fit=crop&amp;w=1800&amp;h=1000&amp;q=75"
+           alt="Warm, minimal living room with a cream sofa and round rattan mirrors">
+      <div class="hero__content">
+        <p class="eyebrow">The New Season Collection</p>
+        <h1>Transform Your Home into a Dream Space</h1>
+        <p class="hero__lead">Thoughtfully designed furniture, lighting and decor in natural materials and warm, quiet tones, chosen to make every room feel like yours.</p>
+        <div class="hero__cta">
+          <a class="btn btn--light" href="#shop" data-action="filter" data-category="All">Shop Now</a>
+          <a class="btn btn--ghost" href="#categories">Explore Categories</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Categories (tiles are filled in by script.js) ===== -->
+    <section class="section" id="categories">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <p class="eyebrow">Shop by Category</p>
+            <h2>Find Your Style</h2>
+          </div>
+        </div>
+        <div class="category-grid" id="categoryGrid"></div>
+      </div>
+    </section>
+
+    <!-- ===== Featured ===== -->
+    <section class="section section--white" id="featured">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <p class="eyebrow">Handpicked for You</p>
+            <h2>Featured Products</h2>
+          </div>
+          <a class="link-arrow" href="#shop" data-action="filter" data-category="All">View all products <svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
+        </div>
+        <div class="product-grid" data-tag="featured"></div>
+      </div>
+    </section>
+
+    <!-- ===== Best Sellers ===== -->
+    <section class="section" id="bestsellers">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <p class="eyebrow">Loved by Our Customers</p>
+            <h2>Best Sellers</h2>
+          </div>
+        </div>
+        <div class="product-grid" data-tag="best"></div>
+      </div>
+    </section>
+
+    <!-- ===== Promotional banner ===== -->
+    <section class="promo-wrap" aria-labelledby="promoTitle">
+      <div class="promo">
+        <img class="promo__img" loading="lazy" width="1100" height="800"
+             src="https://images.unsplash.com/photo-1616047006789-b7af5afb8c20?auto=format&amp;fit=crop&amp;w=1100&amp;h=800&amp;q=75"
+             alt="Bright living room with a tan leather sofa, arched mirror and indoor plants">
+        <div class="promo__body">
+          <p class="eyebrow">The Warm Minimal Edit</p>
+          <h2 id="promoTitle">Earthy tones. Natural textures. Free shipping above ₹999.</h2>
+          <p>Leather, wood, linen and clay, put together for a living room that feels calm and lived in.</p>
+          <a class="btn btn--light" href="#shop" data-action="filter" data-category="Living Room">Shop Living Room</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== New Arrivals ===== -->
+    <section class="section" id="new">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <p class="eyebrow">Just Landed</p>
+            <h2>New Arrivals</h2>
+          </div>
+        </div>
+        <div class="product-grid" data-tag="new"></div>
+      </div>
+    </section>
+
+    <!-- ===== Shop: search, filter, sort ===== -->
+    <section class="section section--white" id="shop">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <p class="eyebrow">The Full Collection</p>
+            <h2>Shop All Products</h2>
+          </div>
+        </div>
+
+        <div class="toolbar">
+          <label class="search">
+            <span class="visually-hidden">Search products</span>
+            <svg class="icon" aria-hidden="true"><use href="#i-search"></use></svg>
+            <input type="search" id="searchInput" placeholder="Search chairs, lamps, vases…" autocomplete="off">
+          </label>
+          <label class="sort">
+            <span>Sort by</span>
+            <select id="sortSelect">
+              <option value="default">Featured</option>
+              <option value="price-asc">Price: Low to High</option>
+              <option value="price-desc">Price: High to Low</option>
+              <option value="popular">Most Popular</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="chips" id="categoryChips" role="group" aria-label="Filter by category"></div>
+        <p class="result-count" id="resultCount" aria-live="polite"></p>
+
+        <div class="product-grid product-grid--shop" id="shopGrid"></div>
+        <div class="empty" id="shopEmpty" hidden>
+          <svg class="icon" aria-hidden="true"><use href="#i-search"></use></svg>
+          <h3>No products found</h3>
+          <p>Try a different word, or clear the filters to see everything.</p>
+          <button class="btn btn--outline" data-action="reset-filters">Clear filters</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== About ===== -->
+    <section class="section" id="about">
+      <div class="container about">
+        <img class="about__img" loading="lazy" width="900" height="1000"
+             src="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?auto=format&amp;fit=crop&amp;w=900&amp;h=1000&amp;q=75"
+             alt="Sunlit living room corner with a grey sofa, round wooden tables and framed art">
+        <div>
+          <p class="eyebrow">Our Story</p>
+          <h2>Designed for calm, made to last</h2>
+          <p>DECORA HOME began with a simple idea: a home should feel restful the moment you walk in. We work with small workshops and craftspeople to make pieces in honest materials such as solid wood, clay, linen and brass.</p>
+          <p>Every piece in the collection is chosen to sit well with the others, so a room comes together easily, one piece at a time.</p>
+          <ul class="about__points">
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg> Natural, long-lasting materials</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg> Made in small batches by skilled craftspeople</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg> Free shipping on orders above ₹999</li>
+          </ul>
+          <a class="btn btn--primary" href="#shop" data-action="filter" data-category="All">Shop the Collection</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Testimonials ===== -->
+    <section class="section section--white" id="testimonials">
+      <div class="container">
+        <div class="section__head section__head--center">
+          <div>
+            <p class="eyebrow">Kind Words</p>
+            <h2>What Our Customers Say</h2>
+          </div>
+        </div>
+        <div class="testimonials">
+          <figure class="testimonial">
+            <div class="stars" role="img" aria-label="5 out of 5 stars">
+              <svg class="icon" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon" aria-hidden="true"><use href="#i-star"></use></svg>
+            </div>
+            <blockquote>The ceramic lamp changed my whole living room. The light is warm and soft, and it looks far more expensive than it was.</blockquote>
+            <figcaption><span class="avatar" aria-hidden="true">AM</span><span><strong>Ananya Mehta</strong>Bengaluru</span></figcaption>
+          </figure>
+          <figure class="testimonial">
+            <div class="stars" role="img" aria-label="5 out of 5 stars">
+              <svg class="icon" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon" aria-hidden="true"><use href="#i-star"></use></svg>
+            </div>
+            <blockquote>Packed with real care and delivered in four days. The floating shelves are solid wood, and they went up in twenty minutes.</blockquote>
+            <figcaption><span class="avatar" aria-hidden="true">RK</span><span><strong>Rohan Kapoor</strong>Mumbai</span></figcaption>
+          </figure>
+          <figure class="testimonial">
+            <div class="stars" role="img" aria-label="5 out of 5 stars">
+              <svg class="icon" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon" aria-hidden="true"><use href="#i-star"></use></svg><svg class="icon" aria-hidden="true"><use href="#i-star"></use></svg>
+            </div>
+            <blockquote>I have ordered three times now. Everything matches, so my bedroom finally looks like it was planned and not collected.</blockquote>
+            <figcaption><span class="avatar" aria-hidden="true">PN</span><span><strong>Priya Nair</strong>Kochi</span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Newsletter ===== -->
+    <section class="section" id="newsletter">
+      <div class="container">
+        <div class="newsletter">
+          <p class="eyebrow">Stay in Touch</p>
+          <h2>Join the DECORA HOME list</h2>
+          <p>New arrivals, styling ideas and early access to offers. One email a month.</p>
+          <form class="newsletter__form" id="newsletterForm" novalidate>
+            <label class="visually-hidden" for="nlEmail">Email address</label>
+            <input id="nlEmail" name="email" type="email" required placeholder="you@example.com" autocomplete="email"
+                   pattern="[^@\s]+@[^@\s]+\.[^@\s]+" data-error="Enter a valid email address, like name@example.com."
+                   aria-describedby="nlEmail-error">
+            <button class="btn btn--primary" type="submit">Subscribe</button>
+            <p class="field__error" id="nlEmail-error"></p>
+          </form>
+          <p class="newsletter__ok" id="newsletterMsg" role="status"></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer" id="contact">
+    <div class="container footer__grid">
+      <div>
+        <a class="logo logo--light" href="#home" aria-label="DECORA HOME, back to top">
+          <svg class="logo__mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M6 28V14a10 10 0 0 1 20 0v14M13 28v-9a3 3 0 0 1 6 0v9M3 28h26"/></svg>
+          <span>DECORA <span class="logo__thin">HOME</span></span>
+        </a>
+        <p class="footer__about">Furniture, lighting and decor for calm, beautiful homes. Designed with care and made to be lived with.</p>
+      </div>
+
+      <nav aria-label="Shop">
+        <h3>Shop</h3>
+        <ul>
+          <li><a href="#shop" data-action="filter" data-category="All">All Products</a></li>
+          <li><a href="#shop" data-action="filter" data-category="Living Room">Living Room</a></li>
+          <li><a href="#shop" data-action="filter" data-category="Bedroom">Bedroom</a></li>
+          <li><a href="#shop" data-action="filter" data-category="Lighting">Lighting</a></li>
+          <li><a href="#shop" data-action="filter" data-category="Decor">Decor</a></li>
+          <li><a href="#shop" data-action="filter" data-category="Storage">Storage</a></li>
+        </ul>
+      </nav>
+
+      <nav aria-label="Explore">
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="#featured">Featured</a></li>
+          <li><a href="#bestsellers">Best Sellers</a></li>
+          <li><a href="#new">New Arrivals</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#testimonials">Reviews</a></li>
+          <li><a href="#newsletter">Newsletter</a></li>
+        </ul>
+      </nav>
+
+      <div>
+        <h3>Contact</h3>
+        <ul class="footer__contact">
+          <li><svg class="icon" aria-hidden="true"><use href="#i-pin"></use></svg><span>14 Lavelle Road, Bengaluru, Karnataka 560001</span></li>
+          <li><a href="tel:+919876543210"><svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg>+91 98765 43210</a></li>
+          <li><a href="mailto:hello@decorahome.example"><svg class="icon" aria-hidden="true"><use href="#i-mail"></use></svg>hello@decorahome.example</a></li>
+          <li class="footer__hours">Monday to Saturday, 10 am to 7 pm</li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <p>© 2026 DECORA HOME. All rights reserved.</p>
+      <p>Demo storefront: products, prices and contact details are for illustration only.</p>
+    </div>
+  </footer>
+
+  <!-- ===== Product details ===== -->
+  <dialog class="modal" id="productDialog" aria-labelledby="detailName">
+    <button class="icon-btn modal__close" data-action="close" aria-label="Close product details">
+      <svg class="icon" aria-hidden="true"><use href="#i-close"></use></svg>
+    </button>
+    <div class="detail" id="productDetail"></div>
+  </dialog>
+
+  <!-- ===== Cart ===== -->
+  <dialog class="drawer" id="cartDrawer" aria-labelledby="cartTitle">
+    <div class="drawer__box">
+      <div class="drawer__head">
+        <h2 id="cartTitle">Your Cart</h2>
+        <button class="icon-btn" data-action="close" aria-label="Close cart">
+          <svg class="icon" aria-hidden="true"><use href="#i-close"></use></svg>
+        </button>
+      </div>
+      <div class="drawer__body" id="cartItems"></div>
+      <div class="drawer__foot" id="cartSummary"></div>
+    </div>
+  </dialog>
+
+  <!-- ===== Wishlist ===== -->
+  <dialog class="drawer" id="wishlistDrawer" aria-labelledby="wishTitle">
+    <div class="drawer__box">
+      <div class="drawer__head">
+        <h2 id="wishTitle">Your Wishlist</h2>
+        <button class="icon-btn" data-action="close" aria-label="Close wishlist">
+          <svg class="icon" aria-hidden="true"><use href="#i-close"></use></svg>
+        </button>
+      </div>
+      <div class="drawer__body" id="wishlistItems"></div>
+    </div>
+  </dialog>
+
+  <!-- ===== Demo checkout: no payment fields, nothing is sent anywhere ===== -->
+  <dialog class="modal modal--narrow" id="checkoutDialog" aria-labelledby="checkoutTitle">
+    <button class="icon-btn modal__close" data-action="close" aria-label="Close checkout">
+      <svg class="icon" aria-hidden="true"><use href="#i-close"></use></svg>
+    </button>
+    <div class="checkout">
+      <div class="checkout__head">
+        <h2 id="checkoutTitle">Checkout</h2>
+        <span class="demo-tag">Demo</span>
+      </div>
+
+      <form id="checkoutForm" novalidate>
+        <p class="demo-note"><strong>This is a demo checkout.</strong> No real order is placed, no payment details are collected, and nothing you type here is saved or sent anywhere.</p>
+
+        <div class="form-grid">
+          <div class="field field--full">
+            <label for="coName">Full name</label>
+            <input id="coName" name="name" type="text" required autocomplete="name" aria-describedby="coName-error">
+            <p class="field__error" id="coName-error"></p>
+          </div>
+          <div class="field">
+            <label for="coEmail">Email</label>
+            <input id="coEmail" name="email" type="email" required autocomplete="email"
+                   pattern="[^@\s]+@[^@\s]+\.[^@\s]+" data-error="Enter a valid email address, like name@example.com."
+                   aria-describedby="coEmail-error">
+            <p class="field__error" id="coEmail-error"></p>
+          </div>
+          <div class="field">
+            <label for="coPhone">Mobile number</label>
+            <input id="coPhone" name="phone" type="tel" required inputmode="numeric" autocomplete="tel-national"
+                   pattern="[0-9]{10}" data-error="Enter a 10-digit mobile number, digits only."
+                   aria-describedby="coPhone-error">
+            <p class="field__error" id="coPhone-error"></p>
+          </div>
+          <div class="field field--full">
+            <label for="coAddress">Delivery address</label>
+            <textarea id="coAddress" name="address" rows="2" required autocomplete="street-address" aria-describedby="coAddress-error"></textarea>
+            <p class="field__error" id="coAddress-error"></p>
+          </div>
+          <div class="field">
+            <label for="coCity">City</label>
+            <input id="coCity" name="city" type="text" required autocomplete="address-level2" aria-describedby="coCity-error">
+            <p class="field__error" id="coCity-error"></p>
+          </div>
+          <div class="field">
+            <label for="coPin">PIN code</label>
+            <input id="coPin" name="pin" type="text" required inputmode="numeric" autocomplete="postal-code"
+                   pattern="[1-9][0-9]{5}" data-error="Enter a 6-digit PIN code."
+                   aria-describedby="coPin-error">
+            <p class="field__error" id="coPin-error"></p>
+          </div>
+        </div>
+
+        <div class="summary" id="checkoutSummary"></div>
+        <p class="checkout__pay">Payment: none. This demo never asks for card, UPI or bank details.</p>
+        <button class="btn btn--primary btn--block" type="submit">Place Demo Order</button>
+      </form>
+
+      <div class="checkout__done" id="checkoutDone" tabindex="-1" hidden>
+        <svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>
+        <h3>Thank you, <span id="doneName"></span>!</h3>
+        <p>Your demo order came to <strong id="doneTotal"></strong>.</p>
+        <p class="demo-note"><strong>Nothing was actually ordered or charged.</strong> This checkout is a demonstration, and your details were not saved or sent.</p>
+        <button class="btn btn--primary" data-action="close">Continue Shopping</button>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Small confirmation message, shown above any open dialog -->
+  <div class="toast" id="toast" popover="manual" role="status"></div>
+</body>
+</html>
